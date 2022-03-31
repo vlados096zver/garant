@@ -1,0 +1,84 @@
+@import 'responsive'
+
+.contacts
+
+	&__wrap
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin: 0 -15px
+
+	&__item
+		display: flex
+		align-items: center
+		width: max-content
+		font-size: 36px
+		line-height: 1.2
+		color: #272F33
+		background-repeat: no-repeat
+		background-position: left center
+		padding-left: 34px
+		margin: 0 15px
+		font-weight: 100
+		margin-bottom: 42px
+		+media(mdx)
+			font-size: 28px
+		+media(sm)
+			font-size: 20px
+
+		&--phone
+			background-image: url(../img/icons/phone.svg)
+			background-size: 20px
+			
+
+		&--email
+			background-image: url(../img/icons/email.svg)
+			background-size: 20px 15px
+
+	&__address
+		font-size: 24px
+		line-height: 1.2
+		color: #272F33
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 52px
+		font-weight: 400
+		+media(sm)
+			font-size: 20px
+
+	&__text
+		margin-bottom: 75px
+		p
+			font-size: 24px
+			line-height: 1.2
+			color: #272F33
+			text-align: center
+			text-transform: uppercase
+			font-weight: 200
+			+media(sm)
+				font-size: 20px
+
+	&__block
+		padding-top: 10px
+
+	&__btn
+		display: block
+		cursor: pointer
+		position: relative
+		border: none
+		outline: none
+		width: 28px	
+		height: 28px	
+		padding: 0px	
+		background-color: transparent
+		margin: 0 auto
+		&:after
+			position: absolute
+			content: ' '
+			left: 50%
+			top: calc(50% - 12px)
+			width: 18px
+			height: 18px
+			border-bottom: 2px solid #453232
+			border-right: 2px solid #453232
+			transform: translateX(-50%) rotate(45deg)

@@ -1,0 +1,176 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	min-height: 100vh
+	overflow-x: hidden
+	color: #333333
+	background-color: #fff
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: "Roboto"
+
+*
+	box-sizing: border-box
+
+img
+	max-width: 100%
+	height: auto
+
+.slide
+	background-color: #eee8e2
+	padding: 0 100px
+	+media(mdx)
+		padding: 0 50px
+	+media(sm)
+		padding: 0px
+		
+.title
+	font-size: 48px
+	color: #453232
+	text-align: center
+	text-transform: uppercase
+	padding-bottom: 42px
+	font-weight: normal
+	+media(mdx)	
+		font-size: 38px
+	+media(sm)
+		font-size: 18px
+	&--main
+		font-weight: 900
+
+.fp-tableCell
+	position: relative
+	z-index: 2
+
+.btn
+	font-size: 18px
+	line-height: 1.67
+	color: #272F33
+	border: none
+	outline: none
+	font-family: Roboto
+	&--look
+		cursor: pointer
+		display: block
+		width: max-content
+		background-image: url(../img/icons/look.svg)
+		background-position: top center
+		background-size: 30px
+		background-repeat: no-repeat
+		padding-top: 45px
+		margin: 0 auto
+		margin-top: 45px
+		margin-bottom: 35px
+
+	&--write
+		cursor: pointer
+		max-width: 196px
+		width: 100%
+		background-color: #ffffff
+		border-radius: 5px
+		padding: 10px
+		margin-right: 75px
+		font-weight: normal
+
+.input	
+	display: block
+	width: 100%
+	font-size: 18px
+	line-height: 1.25
+	color: #333333
+	background-color: #EADED2
+	border: 2px solid #DAD0C6
+	text-transform: uppercase
+	border-radius: 5px
+	appearance: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	padding: 17px 20px
+	font-weight: normal
+	+media(mdx)
+		padding: 12px 20px
+	&::placeholder
+		color: #333333
+	&:focus::placeholder
+		color: transparent
+	&--area
+		min-height: 200px
+		resize: none
+
+	&.form-fail
+		border-color: #d8352a	
+
+.container
+	max-width: 1580px
+	width: 100%
+	margin: 0 auto
+	&--doc
+		max-width: 1350px
+
+	&--content
+		max-width: 1230px
+		padding: 0 15px
+
+	&--take
+		max-width: 830px
+		width: 100%
+		padding: 0 15px
+
+.slide
+	.info__holder,
+	.contacts__holder,
+	.services__holder,
+	.doc__wrap	
+		padding: 0 15px
+		+media(sm)
+			padding-top: 196px
+
+.bg-body
+	position: relative
+
+
+.fp-enabled, .fp-scrollable, .slide
+	@media screen and (min-width: 780px)
+		height: calc(100vh - 240px) !important
+
+.help
+	position: relative
+	z-index: 3
+
+.breadcrumbs
+	&__list
+		display: flex	
+		flex-wrap: wrap
+		align-items: center
+		padding-bottom: 35px
+		li
+			display: block
+			cursor: default
+			margin-bottom: 15px
+			&:not(:last-child)
+				margin-right: 30px
+				transition: 0.3s color
+				position: relative
+				&:after
+					position: relative
+					right: -15px
+					line-height: 1
+					content: '/'
+					color: #272F33
+
+		li, a
+			font-size: 16px
+			line-height: 1.25
+			color: #272F33
+			text-transform: uppercase
+			transition: 0.25s color
+			font-weight: 200
+
+		a
+			&:hover
+				color: #7C8D63

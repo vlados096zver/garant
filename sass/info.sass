@@ -1,0 +1,158 @@
+@import 'responsive'
+
+.info
+	position: relative
+	overflow: hidden
+	&:after,
+	&:before
+		position: absolute
+		content: ' '
+		background-image: url(../img/icons/decor.svg)
+		background-repeat: no-repeat
+		+media(heightCheck)
+			display: none
+		+media(mdx)
+			display: none
+
+	&:after
+		top: 230px
+		left: -150px
+		width: 300px
+		height: 300px
+		background-size: 300px
+		
+
+	&:before
+		bottom: 105px
+		right: 150px
+		width: 150px
+		height: 150px
+		background-size: 150px
+
+	&--inner
+		overflow: hidden
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			background-image: url(../img/icons/decor.svg)
+			background-repeat: no-repeat
+			+media(heightCheck)
+				display: none
+			+media(mdx)
+				display: none
+
+		&:after
+			top: -155px
+			left: 455px
+			width: 300px
+			height: 300px
+			background-size: 300px
+			
+
+		&:before
+			bottom: 100px
+			right: 210px
+			width: 150px
+			height: 150px
+			background-size: 150px
+
+		.info__text
+			p
+				font-size: 18px
+				line-height: 1.67
+
+
+	&:not(.info--inner) 
+		.fp-tableCell
+			position: relative
+			&:after,
+			&:before
+				position: absolute
+				content: ' '
+				+media(desc)	
+					display: none
+
+			&:after
+				top: 0px
+				left: 220px
+				width: 1px
+				height: 100%
+				background-color: #EADED2
+
+			&:before
+				z-index: 3
+				top: 195px
+				left: calc(220px - 8px)
+				width: 16px
+				height: 16px
+				background-color: #ffffff
+				border-radius: 50%
+				box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+
+	&__holder
+		max-width: 970px
+		position: relative
+		z-index: 3
+		margin: 0 auto
+
+	&__title
+		font-size: 48px
+		line-height: 1.2
+		color: #272F33
+
+	&__text
+		max-width: 840px
+		width: 100%
+		margin: 0 auto
+		padding-bottom: 30px
+		p
+			font-size: 20px
+			line-height: 1.5
+			color: #453232
+			text-align: center
+			+media(mdx)
+				font-size: 17px
+			+media(sm)
+				font-size: 16px
+			&:not(:last-child)
+				padding-bottom: 1.5em
+
+		h1
+			font-size: 24rem
+
+		h2
+			font-size: 22rem
+
+		h3
+			font-size: 18rem
+
+		h4, h5, h6
+			font-size: 16rem
+			line-height: 1.29	
+
+		h1, h2, h3, h4, h5, h6
+			color: #453232
+			padding-bottom: 2px
+			font-weight: 500
+
+		ul, ol
+			padding: 0px
+			margin: 0px
+			padding-bottom: 1.5em
+			li
+				position: relative
+				font-size: 1.25rem
+				line-height: 1.25
+				color: #453232
+				margin-bottom: 5px
+				font-weight: normal
+
+		ol
+			li
+				list-style-position: inside
+
+		a
+			display: inline-block
+			color: #453232
+			margin-bottom: 12px

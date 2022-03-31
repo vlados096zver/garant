@@ -1,0 +1,106 @@
+
+.take
+	padding-bottom: 45px
+	.write__item
+		padding-bottom: 25px
+
+	&__inner
+		position: relative
+		display: flex
+		align-items: center
+		background-color: #EADED2
+		border: 2px solid #DAD0C6
+		margin-bottom: 46px
+
+	&__subtitle
+		font-size: 18px
+		text-transform: uppercase
+		padding: 19px 20px
+		padding-right: 26px
+
+	&__inner
+		input
+			position: relative
+			z-index: 2
+			display: block
+			width: 100%
+			border: none
+			outline: none
+			background-color: transparent
+			padding: 19px 20px
+
+	&__days
+		position: absolute
+		left: 250px
+
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__col
+		font-size: 18px
+		line-height: 1.2
+		color: #333333
+		text-transform: uppercase
+		margin-bottom: 60px
+		+media(mdx)
+			margin-bottom: 45px
+		+media(sm)
+			margin-bottom: 40px
+
+	&__desc
+		font-size: 16px
+		line-height: 1.5
+		color: #272F33
+		text-align: center
+		margin-bottom: 50px
+
+	.write__btn
+		max-width: 232px
+
+
+.slider
+	-webkit-appearance: none
+	width: 100%
+	height: 6px
+	background-color: rgba(255, 255, 255, 0.314)
+	outline: none
+	padding: 0px
+	cursor: pointer
+	margin-bottom: 45px
+	+media(sm)
+		height: 4px
+	&::-webkit-slider-thumb
+		-webkit-appearance: none
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background: #EADED2
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+		cursor: pointer
+		transition: all 0.15s ease-in-out
+		+media(sm)
+			width: 20px
+			height: 20px
+		&:hover
+			transform: scale(1.2)
+
+	&::-moz-range-thumb
+		width: 30px
+		height: 30px
+		border: 0
+		border-radius: 50%
+		background: #EADED2
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+		border-radius: 15px
+		cursor: pointer
+		transition: background 0.15s ease-in-out
+		+media(sm)
+			width: 20px
+			height: 20px
+		&:hover
+			transform: scale(1.2)
+
+		&::-webkit-slider-runnable-track
+			animate: 0.2s

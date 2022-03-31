@@ -1,0 +1,104 @@
+@import 'responsive'
+
+.services
+	position: relative
+	overflow: hidden
+	&:after
+		position: absolute
+		content: ' '
+		z-index: 5
+		top: -150px
+		left: 50%
+		transform: translateX(-50%)
+		width: 300px
+		height: 300px
+		background-image: url(../img/icons/decor.svg)
+		background-repeat: no-repeat
+		background-size: 300px
+		+media(heightCheck)
+			display: none
+		+media(mdx)
+			display: none
+
+	.fp-tableCell
+		position: relative
+		&:after
+			position: absolute
+			content: ' '
+			bottom: 95px
+			left: 135px
+			width: 150px
+			height: 150px
+			background-image: url(../img/icons/decor.svg)
+			background-repeat: no-repeat
+			background-size: 150px
+			+media(heightCheck)
+				display: none
+			+media(mdx)
+				display: none
+
+		&:before
+			position: absolute
+			content: ' '
+			bottom: 145px
+			right: 350px
+			width: 70px
+			height: 70px
+			background-image: url(../img/icons/decor.svg)
+			background-repeat: no-repeat
+			background-size: 70px
+			+media(heightCheck)
+				display: none
+			+media(mdx)
+				display: none
+
+	&__inner
+		height: 100%
+
+	&__wrap
+		position: relative
+		z-index: 2
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+
+	&__item
+		width: calc(100% / 4 - 40px)
+		background-color: #eaded2
+		padding: 110px 30px
+		margin: 0 20px
+		margin-bottom: 20px
+		+media(mdx)
+			padding: 50px 30px
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			width: 100%
+			margin: 0px
+			margin-bottom: 20px
+
+	&__image
+		width: 50px
+		height: 50px
+		margin: 0 auto
+		margin-top: 20px
+		margin-bottom: 38px
+
+	&__title
+		font-size: 24px
+		line-height: 1.25
+		color: #272F33
+		text-align: center
+		text-transform: uppercase
+		padding-bottom: 25px
+		font-weight: 400
+
+	&__text
+		max-width: 660px
+		width: 100%
+		margin: 0 auto
+		p
+			font-size: 14px
+			line-height: 1.43
+			color: #272F33
+			text-align: center
+			padding-bottom: 1.5em

@@ -1,0 +1,77 @@
+@import 'responsive'
+
+.iScrollIndicator
+	background: #333 !important
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span, #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span, #fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span
+	width: 20px
+	height: 20px
+	margin: 0px
+
+#fp-nav ul li a span,
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span, 
+#fp-nav ul li:hover a span, 
+.fp-slidesNav ul li:hover a span
+	width: 10px
+	height: 10px
+
+#fp-nav
+	top: calc(50% + 43px)
+	+media(mdx)
+		top: calc(50% + 27px)
+	+media(sm)
+		display: none
+	ul li a
+		span
+			border: 2px solid #272F33
+			background: #fff
+
+		&.active span
+			background: #272F33
+
+	&.fp-right
+		right: 60px
+		+media(mdx)
+			right: 15px
+		+media(sm)
+			right: 8px
+
+	ul li a span
+		left: 50%
+		transform: translate(-50%, -50%)
+		top: 50%
+
+.fp-slidesNav ul li a span
+	left: 0px
+	top: 0px
+
+#fp-nav ul li
+	width: 20px
+	height: 20px
+	margin: 0px
+	&:not(:last-child)
+		margin-bottom: 66px
+		+media(mdx)
+			margin-bottom: 32px
+
+		&:after
+			position: absolute
+			content: ' '
+			top: 10px
+			left: 50%
+			transform: translateX(-50%)
+			width: 1px
+			height: calc(66px + 20px)
+			background-color: #272F33
+			+media(mdx)
+				height: calc(32px + 20px)
+
+	&:nth-last-child(2)
+		margin-bottom: 0px
+		&:after
+			display: none
+
+	&:last-child
+		display: none

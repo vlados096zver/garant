@@ -1,0 +1,37 @@
+@import 'responsive'
+
+.content
+	padding-top: 90px
+	+media(mdx)
+		padding-top: 70px
+	+media(sm)
+		padding-top: 50px
+	.title
+		text-align: left
+		
+	.info__text
+		max-width: 100%
+		p
+			font-size: 16px
+
+	.doc__wrap
+		margin-top: 30px
+		padding-bottom: 160px
+		+media(mdx)
+			padding-bottom: 120px
+		+media(sm)
+			padding-bottom: 80px
+
+	&__text
+		margin-bottom: 65px
+		+media(mdx)
+			margin-bottom: 45px
+		+media(sm)
+			margin-bottom: 35px
+		p
+			font-size: 16px
+			line-height: 1.25
+			padding-bottom: 2em
+			&:last-child
+				border-top: 1px solid #272F33
+				padding-top: 2em

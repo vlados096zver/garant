@@ -1,0 +1,195 @@
+@import 'responsive'
+
+.bg-inner
+	background: #EEE8E2
+	.main-header__nav
+		position: relative
+		background: #EEE8E2
+
+	.main-header__wrap
+		&:before,
+		&:after
+			+media(sm)
+				background-color: #EEE8E2
+
+.main-header
+	&__nav
+		position: fixed
+		top: 0px
+		z-index: 4
+		left: 15px
+		width: calc(100% - 30px)
+		padding-top: 30px
+		+media(sm)
+			background-color: #EADED2
+			padding-top: 0px	
+
+	&__control
+		display: none
+		position: relative
+		align-items: center
+		justify-content: space-between
+		background-color: #FFF6F1
+		border-bottom: 2px solid #F5D8C7
+		padding: 22px 15px
+		+media(sm)
+			display: flex
+			padding: 22px 5px
+
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			z-index: 22
+			width: 15px
+			height: 100%
+			background-color: #FFF6F1
+
+		&:after
+			left: -15px
+
+		&:before
+			right: -15px
+
+	&__subtitle
+		font-size: 20px
+		line-height: 1.2
+		color: #453232
+		text-align: center
+		text-transform: uppercase
+		font-weight: 200
+
+	&__next,
+	&__prev
+		display: block
+		background-color: transparent
+		border: none
+		border-left: 2px solid #453232
+		border-top: 2px solid #453232
+		transform: rotate(-45deg)
+		width: 20px
+		height: 20px
+		transition: 0.25s border
+		&:hover
+			border-color: #F5D8C7
+
+	&__next
+		transform: rotate(-45deg) scale(-1)
+
+	&__wrap
+		position: relative
+		display: flex
+		align-items: center
+		&:after
+			+media(sm)
+				position: absolute
+				content: ' '
+				top: 0px
+				left: -15px
+				width: 15px
+				height: 100%
+				background-color: #EADED2
+
+		&:before
+			+media(sm)
+				position: absolute
+				content: ' '
+				top: 0px
+				right: -15px
+				width: 15px
+				height: 100%
+				background-color: #EADED2
+
+		.btn--write
+			+media(sm)
+				display: none
+
+	&__logo
+		font-size: 32px
+		line-height: 1.2
+		color: #272F33
+		text-transform: uppercase
+		margin-right: auto
+		font-weight: 900
+		+media(mini)
+			font-size: 23px
+		span
+			color: #f9ab5e
+			font-weight: 300
+
+	&__btn
+		cursor: pointer
+		display: block
+		position: relative
+		width: 70px
+		height: 70px
+		background-color: rgba(255, 255, 255, 0.2)
+		outline: none
+		border: none
+		border-radius: 35px
+		padding: 0px
+		+media(sm)
+			background-color: transparent
+			position: relative
+			left: 15px
+
+.mobile-wrap
+	display: none
+	align-items: center
+	justify-content: space-between
+	cursor: pointer
+	+media(sm)
+		display: flex
+		width: 100%
+		padding: 0px 10px
+		padding-left: 0px
+
+.line-burger
+	display: block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translateX(-50%)
+	width: 42px
+	height: 3px
+	background-color: #272F33
+	transition: 0.5s width
+	+media(sm)
+		width: 33px
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		width: 33px
+		height: 3px
+		background-color: #272F33
+		left: 50%
+		transform: translateX(-50%)
+		transition: 0.5s
+	&:after
+		top: calc(100% + 9px)
+	&:before
+		bottom: calc(100% + 9px)
+
+.line-active
+	width: 0
+	+media(sm)
+		width: 0px	
+	&:after
+		transform: translateX(calc(-50% + 4px)) rotate(-45deg)
+		transform-origin: 0 0
+	&:before
+		transform: translateX(calc(-50% + 4px)) rotate(45deg)
+		transform-origin: 0 100%
+
+.main-nav__toggle
+	position: relative
+	cursor: pointer
+	display: block
+	width: 25px
+	height: 25px
+
+.contrast-bg
+	background-color: #fff
+	transition: 0.3
+	transition: background-color 0.5s ease-in
